@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { routing } from './app.routes';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
+import {ProductResolver} from "./product/resolves/product.resolver";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HeaderComponent } from './header/header.component';
     MaterialModule.forRoot(),
     routing
   ],
-  providers: [],
+  providers: [ProductResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

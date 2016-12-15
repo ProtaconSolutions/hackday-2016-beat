@@ -1,11 +1,11 @@
 <md-card>
   <md-list>
-    <md-list-item>
+    <md-list-item *ngFor="let product of products | async">
       <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line> asdfsadf </h3>
+      <h3 md-line>{{ product.name }}</h3>
       <p md-line>
-        <span> sdfggfsdgsdf </span>
-        <span class="demo-2"> -- asdf </span>
+        <span>{{ product.description }}</span>
+        <span class="demo-2"> -- {{ product.price }} </span>
       </p>
       <button md-button color="primary" >TILAA</button>
     </md-list-item>
