@@ -1,101 +1,21 @@
 <md-card>
   <md-list>
-    <md-list-item>
+    <md-list-item *ngFor="let product of products | async">
       <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
+      <h3 md-line>{{ product.name }}</h3>
       <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
+        <span>{{ product.description }}</span>
+        <span class="demo-2"> -- {{ product.price }} </span>
       </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-      <div class="order-how-many">
-        <button md-raised-button color="primary" >1</button>
-        <button md-raised-button color="primary" >2</button>
-        <button md-raised-button color="primary" >3</button>
-        <button md-raised-button color="primary" >...</button>
-        <button md-raised-button color="accent" ><md-icon>close</md-icon></button>
-      </div>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
-    </md-list-item>
-    <md-list-item>
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>Karjala III </h3>
-      <p md-line>
-        <span> 4,7% </span>
-        <span class="demo-2"> -- Suomi </span>
-      </p>
-      <h3 color="primary" class="price" >5,71€</h3>
-      <button md-raised-button color="primary" >TILAA</button>
+        <h3 color="primary" class="price" >{{ product.price }}</h3>
+      <button md-button color="primary" >TILAA</button>
+        <div class="order-how-many">
+            <button md-raised-button color="primary" >1</button>
+            <button md-raised-button color="primary" >2</button>
+            <button md-raised-button color="primary" >3</button>
+            <button md-raised-button color="primary" >...</button>
+            <button md-raised-button color="accent" ><md-icon>close</md-icon></button>
+        </div>
     </md-list-item>
   </md-list>
 </md-card>

@@ -9,14 +9,13 @@ import { SharedModule } from './shared/shared.module';
 import { routing } from './app.routes';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
-import { FootermenuComponent } from './footermenu/footermenu.component';
+import {ProductResolver} from "./product/resolves/product.resolver";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HeaderComponent,
-    FootermenuComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,7 @@ import { FootermenuComponent } from './footermenu/footermenu.component';
     MaterialModule.forRoot(),
     routing
   ],
-  providers: [],
+  providers: [ProductResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
