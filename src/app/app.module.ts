@@ -6,17 +6,21 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { ProductComponent } from './product/product.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     SharedModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

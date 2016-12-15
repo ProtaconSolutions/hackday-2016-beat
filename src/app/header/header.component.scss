@@ -1,0 +1,17 @@
+@import '../theme/beat-mixins.scss';
+
+.md-icon-button {
+  text-aling: left;
+}
+
+h1 {
+  font-weight: 600;
+  color: $header-row-color;
+  -webkit-margin-after: 0px;
+  -webkit-margin-before: 0px;
+}
+
+.material-icons {
+  color: $header-row-color;
+  font-size: 36px;
+}
