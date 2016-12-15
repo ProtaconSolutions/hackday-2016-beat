@@ -6,6 +6,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { routing } from './app.routes';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -21,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
     HttpModule,
     SharedModule,
     MaterialModule.forRoot(),
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
