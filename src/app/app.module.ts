@@ -7,12 +7,14 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
+import { FootermenuComponent } from './footermenu/footermenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    FootermenuComponent
   ],
   imports: [
     BrowserModule,
