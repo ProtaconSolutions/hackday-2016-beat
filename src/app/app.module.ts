@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import {ProductResolver} from "./product/resolves/product.resolver";
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import {FootermenuComponent} from "./footermenu/footermenu.component";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductComponent,
     HeaderComponent,
     ProductDetailsComponent,
+    FootermenuComponent,
   ],
   imports: [
     BrowserModule,
