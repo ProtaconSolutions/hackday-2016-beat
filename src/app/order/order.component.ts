@@ -13,7 +13,11 @@ export class OrderComponent implements OnInit {
   constructor(
       private angularFire: AngularFire
   ) {
-    this.orders = this.angularFire.database.list('orders');
+    this.orders = this.angularFire.database.list('orders', {
+      query: {
+        limitToLast: 10
+      }
+    });
   }
 
   ngOnInit() {
