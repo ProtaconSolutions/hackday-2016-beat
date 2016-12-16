@@ -1,7 +1,7 @@
 <md-card>
   <md-list>
     <md-list-item *ngFor="let product of products | async">
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
+      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="..." (click)="openProduct(product)">
       <h3 md-line>{{ product.name }}</h3>
       <p md-line>
         <span>{{ product.description }}</span>
