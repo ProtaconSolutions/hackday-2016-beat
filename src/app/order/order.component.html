@@ -3,9 +3,12 @@
   <md-list>
     <md-list-item>
       <h3 md-line class="order-sum">Yhteensä 203.56€</h3>
+
+      <button md-button color="primary">MAKSA KAIKKI</button>
     </md-list-item>
   </md-list>
 </md-card>
+<h1>ERITTELY</h1>
 <md-card>
   <md-list>
     <md-list-item *ngFor="let order of orders | async">
