@@ -1,6 +1,6 @@
 <md-card>
   <md-list>
-    <md-list-item *ngFor="let product of products | async">
+    <md-list-item *ngFor="let product of products | async" (click)="openModal()">
       <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
       <h3 md-line>{{ product.name }}</h3>
       <p md-line>
@@ -19,3 +19,11 @@
     </md-list-item>
   </md-list>
 </md-card>
+<div id="overlay" (click)="openModal()">
+    <div id="modal">
+        <div class="title">You clicked a salkku!</div>
+        <div class="body">
+            <img src="http://www.viinarannasta.com/images-shop/1445934499-karjala24x33_web.jpg" alt="">
+        </div>
+    </div>
+</div>

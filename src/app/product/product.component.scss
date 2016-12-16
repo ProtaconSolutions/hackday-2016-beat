@@ -64,3 +64,83 @@ md-card {
     }
   }
 }
+
+#overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow: hidden;
+
+  #modal {
+    width: 250px;
+    box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
+
+    .title {
+      background: #0097A7;
+      color: white;
+      border-radius: 4px 4px 0px 0px;
+      text-align: center;
+      line-height: 48px;
+      font-weight: 700;
+    }
+    .body {
+      background: white;
+      border-radius: 0px 0px 4px 4px;
+      line-height: 20px;
+      //display: flex;
+      //align-items: stretch;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+    &.is-active{
+      display: flex;
+      animation: overlayAnim 5s ease-in-out forwards;
+
+      #modal{
+        animation: modalAnim 5s ease-in-out forwards;
+      }
+    }
+  }
+
+
+
+@keyframes overlayAnim{
+  0%, 100%{
+    background-color: rgba(0,0,0,0);
+  }
+
+  15%, 85% {
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+@keyframes modalAnim{
+  0%{
+    transform: translateX(-200%) rotate(-90deg);
+    opacity: 0
+  }
+  10% {
+    transform: translateX(4%) rotate(4deg);
+  }
+  15%, 85% {
+    transform: translateX(0%);
+    opacity: 1
+  }
+  90% {
+    transform: translateX(-4%) rotate(-4deg);
+  }
+  100% {
+    transform: translateX(300%) rotate(90deg);
+  }
+}

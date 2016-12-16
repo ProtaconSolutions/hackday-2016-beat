@@ -9,8 +9,7 @@ import {AngularFire} from "angularfire2/angularfire2";
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
 
@@ -37,9 +36,17 @@ export class ProductComponent implements OnInit {
       price,
       qty
     });
+    this.activeProduct = null;
   }
-  public setActiveProduct(product){
-    this.activeProduct = product;
+  public closeModal() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.toggle("is-active");
+  }
+  public openModal(){
+    var overlay = document.getElementById("overlay");
+    overlay.classList.toggle("is-active");
+    var anim = document.getElementById("modal");
+    anim.addEventListener("animationend", this.closeModal, false);
   }
 
 }
