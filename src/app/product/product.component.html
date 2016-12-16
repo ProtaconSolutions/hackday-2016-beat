@@ -1,13 +1,15 @@
+<h1>RAFLAN NIMI TÄHÄN</h1>
+
 <md-card>
   <md-list>
-    <md-list-item *ngFor="let product of products | async" (click)="openModal()">
-      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="...">
-      <h3 md-line>{{ product.name }}</h3>
-      <p md-line>
+    <md-list-item *ngFor="let product of products | async" >
+      <img md-list-avatar src="http://www.viinahuuto.com/454-large_default/karjala-52.jpg" alt="..." (click)="openModal()">
+      <h3 md-line (click)="openModal()">{{ product.name }}</h3>
+      <p md-line (click)="openModal()">
         <span>{{ product.description }}</span>
         <span class="demo-2"> -- {{ product.price }} </span>
       </p>
-        <h3 color="primary" class="price" >{{ product.price }}</h3>
+        <h3 color="primary" class="price"(click)="openModal()" >{{ product.price }}</h3>
       <button md-raised-button color="primary" (click)="activeProduct = product">TILAA</button>
         <div class="order-how-many" *ngIf="activeProduct == product">
             <button md-raised-button color="primary" (click)="addOrder(product, 1)">1</button>
