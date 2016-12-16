@@ -66,7 +66,7 @@ md-card {
 }
 
 #overlay{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -94,8 +94,6 @@ md-card {
       background: white;
       border-radius: 0px 0px 4px 4px;
       line-height: 20px;
-      //display: flex;
-      //align-items: stretch;
       img {
         width: 100%;
         height: auto;
