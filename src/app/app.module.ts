@@ -10,12 +10,14 @@ import { routing } from './app.routes';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import {ProductResolver} from "./product/resolves/product.resolver";
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HeaderComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FirebaseListObservable} from "angularfire2";
 import {ProductItem} from "./interfaces/product-item.interface";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Resolves} from "./interfaces/resolves.interface";
 import {ViewEncapsulation} from '@angular/core';
 
@@ -16,7 +16,8 @@ export class ProductComponent implements OnInit {
   public products : FirebaseListObservable<ProductItem[]>;
 
   constructor(
-      private activatedRoute: ActivatedRoute
+      private activatedRoute: ActivatedRoute,
+      private router: Router
   ) {}
 
   ngOnInit() {
@@ -25,4 +26,7 @@ export class ProductComponent implements OnInit {
     });
   }
 
+  public openProduct(product: ProductItem) {
+    this.router.navigate(['product', product.$key]);
+  }
 }
