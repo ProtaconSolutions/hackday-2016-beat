@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ViewEncapsulation} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-footermenu',
@@ -9,9 +10,10 @@ import {ViewEncapsulation} from '@angular/core';
 })
 export class FootermenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
-
 }
