@@ -8,7 +8,7 @@
         <span class="demo-2"> -- {{ product.price }} </span>
       </p>
         <h3 color="primary" class="price" >{{ product.price }}</h3>
-      <button md-button color="primary" (click)="activeProduct = product">TILAA</button>
+      <button md-raised-button color="primary" (click)="activeProduct = product">TILAA</button>
         <div class="order-how-many" *ngIf="activeProduct == product">
             <button md-raised-button color="primary" (click)="addOrder(product, 1)">1</button>
             <button md-raised-button color="primary" (click)="addOrder(product, 2)">2</button>
