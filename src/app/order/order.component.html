@@ -17,7 +17,7 @@
       </p>
       <p>
         <span> Yhteensä </span>
-        <span class="demo-2"> x.xx € </span>
+        <span class="demo-2"> {{ order.qty * order.price.slice(1).replace(',', '.') }} € </span>
       </p>
     </md-list-item>
   </md-list>
