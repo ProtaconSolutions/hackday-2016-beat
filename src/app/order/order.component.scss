@@ -17,8 +17,14 @@ md-card {
       h3 {
         font-weight: 600;
         font-size: 1.3em;
+        &.order-sum {
+          padding: 10px;
+        }
       }
 
+      button {
+        margin-left: 5px;
+      }
       div.md-list-item {
         padding: 0px 0px 0px 16px;
       }
