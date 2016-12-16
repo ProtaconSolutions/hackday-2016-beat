@@ -39,10 +39,17 @@ export class ProductComponent implements OnInit {
       price,
       qty
     });
+    this.activeProduct = null;
   }
-
-  public setActiveProduct(product){
-    this.activeProduct = product;
+  public closeModal() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.toggle("is-active");
+  }
+  public openModal(){
+    var overlay = document.getElementById("overlay");
+    overlay.classList.toggle("is-active");
+    var anim = document.getElementById("modal");
+    anim.addEventListener("animationend", this.closeModal, false);
   }
 
   public openProduct(product: ProductItem) {

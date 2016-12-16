@@ -1,0 +1,114 @@
+@import '../../../node_modules/@angular/material/core/theming/all-theme';
+
+body {
+  margin-bottom: 30%; // Define this better, hackday quick fix...
+}
+
+md-card {
+  padding: 0 !important;
+
+  md-list {
+    padding-top: 0;
+
+    md-list-item {
+      border-bottom: 1px solid #e8e8e8;
+      position: relative;
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.3em;
+      }
+
+      div.md-list-item {
+        padding: 0px 0px 0px 16px;
+      }
+
+      h3.price {
+        text-align: right;
+        padding-right: 12px;
+      }
+
+      [md-raised-button] {
+        height: 100%;
+        min-width: 66px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .order-how-many {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+
+        [md-raised-button] {
+          width: 20%;
+          min-width: 20%;
+          padding: 0 !important;
+          margin-right: -4px;
+          border-right: 1px solid #e8e8e8;
+          font-size: 2em;
+        }
+
+        :last-child {
+          border-right: none;
+
+          md-icon {
+            font-size: 24px;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow: hidden;
+
+  #modal {
+    width: 250px;
+    box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
+
+    .title {
+      background: #0097A7;
+      color: white;
+      border-radius: 4px 4px 0px 0px;
+      text-align: center;
+      line-height: 48px;
+      font-weight: 700;
+    }
+    .body {
+      background: white;
+      border-radius: 0px 0px 4px 4px;
+      line-height: 20px;
+      //display: flex;
+      //align-items: stretch;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &.is-active{
+    display: flex;
+    animation: overlayAnim 5s ease-in-out forwards;
+
+    #modal{
+      animation: modalAnim 5s ease-in-out forwards;
+    }
+  }
+}
