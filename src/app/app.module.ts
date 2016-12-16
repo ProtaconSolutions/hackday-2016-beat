@@ -10,6 +10,7 @@ import { routing } from './app.routes';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import {ProductResolver} from "./product/resolves/product.resolver";
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import {FootermenuComponent} from "./footermenu/footermenu.component";
 
 @NgModule({
@@ -17,6 +18,7 @@ import {FootermenuComponent} from "./footermenu/footermenu.component";
     AppComponent,
     ProductComponent,
     HeaderComponent,
+    ProductDetailsComponent,
     FootermenuComponent,
   ],
   imports: [
